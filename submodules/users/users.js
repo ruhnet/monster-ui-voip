@@ -2473,8 +2473,7 @@ define(function(require) {
 
 				if (switchCallerId.prop('checked')) {
 					var callerIdValue = featureTemplate.find('.caller-id-select').val();
-
-					userToSave.caller_id.external.number = callerIdValue;
+					userToSave.caller_id.external.number = callerIdValue.replace(/\s/g, '');
 				} else if (userToSave.caller_id.hasOwnProperty('external')) {
 					delete userToSave.caller_id.external.number;
 				}
