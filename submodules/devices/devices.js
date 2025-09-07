@@ -998,7 +998,7 @@ define(function(require) {
 					sip: {
 						password: monster.util.randomString(12),
 						realm: monster.apps.auth.currentAccount.realm,
-						username: 'user_' + monster.util.randomString(10)
+						username: 'user_' + monster.util.randomString(10).toLowerCase()
 					}
 				},
 				deviceDefaultsForType = _.get({
